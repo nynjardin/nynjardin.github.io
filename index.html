@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Tracker — nynjardin</title>
+  <meta name="description" content="Native PC ports, replacement servers and LAN play restored: the progress of nynjardin's game projects.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="index">
+  <div class="wrap">
+    <header class="site-head">
+      <div>
+        <p class="eyebrow">nynjardin · project tracker</p>
+        <h1>Project Tracker</h1>
+        <p id="tagline" class="tagline"></p>
+      </div>
+      <button id="lang-toggle" class="lang" type="button">EN</button>
+    </header>
+
+    <section id="stats" class="stats" aria-label="Stats"></section>
+
+    <section class="panel tl-panel">
+      <div class="panel-head">
+        <h2 id="timeline-title"></h2>
+        <p id="timeline-hint" class="muted small"></p>
+      </div>
+      <div id="timeline" class="tl-scroll"></div>
+    </section>
+
+    <div class="index-grid">
+      <section>
+        <div id="filters" class="filters" role="toolbar"></div>
+        <div id="cards" class="cards"></div>
+      </section>
+      <aside class="panel feed-panel">
+        <h2 id="recent-title"></h2>
+        <ol id="recent" class="feed"></ol>
+      </aside>
+    </div>
+
+    <footer id="footer" class="site-foot"></footer>
+  </div>
+  <script src="data/projects.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
