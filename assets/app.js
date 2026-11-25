@@ -107,14 +107,14 @@
   async function gh(path) {
     const key = "gh:" + path;
     try {
-      const c = JSON.parse(sessionStorage.getItem(key) || "null");
+      const c = JSON.parse(localStorage.getItem(key) || "null");
       if (c && Date.now() - c.at < CACHE_MS) return c.data;
     } catch (_) { /* ignore */ }
     try {
       const r = await fetch("https://api.github.com/" + path, { headers: { Accept: "application/vnd.github+json" } });
       if (!r.ok) return null;
       const data = await r.json();
-      sessionStorage.setItem(key, JSON.stringify({ at: Date.now(), data }));
+      try { localStorage.setItem(key, JSON.stringify({ at: Date.now(), data })); } catch (_) { /* quota */ }
       return data;
     } catch (_) { return null; }
   }
