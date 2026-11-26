@@ -13,7 +13,7 @@
  */
 window.TRACKER = {
   owner: "nynjardin",
-  updated: "2026-11-25",
+  updated: "2026-11-26",
 
   projects: [
     // ------------------------------------------------------------------ Burnout 3
@@ -180,33 +180,41 @@ window.TRACKER = {
       kind: "port",
       status: "active",
       started: "2026-11-19",
-      lastActivity: "2026-11-25",
+      lastActivity: "2026-11-26",
       summary: {
-        fr: "Un portage PC natif de MotorStorm: Apocalypse, par recompilation statique du code PowerPC et SPU de la PS3 en C++ (avec ps3recomp). Les courses tournent avec un rendu correct, et le mode LAN caché dans le jeu a été réveillé : on joue en réseau sans aucun serveur. Pacific Rift est aussi recompilé, sans portage pour l'instant.",
-        en: "A native PC port of MotorStorm: Apocalypse, by static recompilation of the PS3's PowerPC and SPU code to C++ (with ps3recomp). Races run with correct rendering, and the LAN mode hidden in the game has been woken up: network play needs no server at all. Pacific Rift is lifted too, with no port yet."
+        fr: "Un portage PC natif de MotorStorm: Apocalypse, par recompilation statique du code PowerPC et SPU de la PS3 en C++ (avec ps3recomp). Les courses tournent avec un rendu correct, et le mode LAN caché dans le jeu a été réveillé : on joue en réseau entre plusieurs PC, sans aucun serveur. Pacific Rift est aussi recompilé, sans portage pour l'instant.",
+        en: "A native PC port of MotorStorm: Apocalypse, by static recompilation of the PS3's PowerPC and SPU code to C++ (with ps3recomp). Races run with correct rendering, and the LAN mode hidden in the game has been woken up: network play across several PCs, with no server at all. Pacific Rift is lifted too, with no port yet."
       },
-      repos: [],
+      repos: [
+        { repo: "nynjardin/motorstorm-apocalypse-recomp", label: { fr: "Sources du portage", en: "Port sources" } }
+      ],
       upstream: [
         { label: "sp00nznet/ps3recomp", url: "https://github.com/sp00nznet/ps3recomp", note: { fr: "la chaîne de recompilation PS3", en: "the PS3 recompilation toolchain" } }
+      ],
+      contributions: [
+        { label: "ps3recomp #853", url: "https://github.com/sp00nznet/ps3recomp/pull/853", state: "open", title: { fr: "cellFs : un tampon de lecture ou d'écriture dans la page nulle répond CELL_EFAULT", en: "cellFs: a read or write buffer in the null page answers CELL_EFAULT" } }
       ],
       stages: [
         { label: { fr: "Code PPU et SPU recompilé, le jeu démarre", en: "PPU and SPU code recompiled, the game boots" }, state: "done" },
         { label: { fr: "Courses complètes, rendu correct", en: "Complete races, correct rendering" }, state: "done" },
         { label: { fr: "30 images/s tenues, vrai Full HD", en: "30 frames a second held, true Full HD" }, state: "done" },
         { label: { fr: "LAN sans serveur, 2 et 3 joueurs sur un PC", en: "Serverless LAN, 2 and 3 players on one PC" }, state: "done" },
-        { label: { fr: "LAN entre deux PC", en: "LAN across two PCs" }, state: "todo" },
+        { label: { fr: "LAN entre deux PC", en: "LAN across two PCs" }, state: "done" },
+        { label: { fr: "4 joueurs et plus", en: "4 players and more" }, state: "todo" },
         { label: { fr: "Release publique", en: "Public release" }, state: "todo" }
       ],
       works: [
         { fr: "Menus et courses complètes sur deux circuits, son réglé", en: "Menus and complete races on two tracks, sound fixed" },
-        { fr: "Résolution libre (1080p, 1440p), lanceur, jeu autonome dans son dossier", en: "Free resolution (1080p, 1440p), launcher, game self-contained in its folder" },
-        { fr: "Salon, « Trouver une partie », courses d'affilée, circuit et mode choisis par l'hôte", en: "Lobby, \"Find a game\", back-to-back races, track and mode picked by the host" },
+        { fr: "Résolution libre (1080p, 1440p), lanceur en anglais et français, jeu autonome dans son dossier", en: "Free resolution (1080p, 1440p), launcher in English and French, game self-contained in its folder" },
+        { fr: "Course à deux entre deux PC, parfaitement fluide", en: "Two-player race across two PCs, perfectly smooth" },
+        { fr: "Salon, « Trouver une partie » (hôte, mode, joueurs et circuit de chaque partie), courses d'affilée", en: "Lobby, \"Find a game\" (host, mode, players and track of each game), back-to-back races" },
         { fr: "Progression en ligne (jetons, rang) gardée en local", en: "Online progression (chips, rank) kept locally" }
       ],
       next: [
-        { fr: "Essai sur un deuxième PC, conduite réelle à deux", en: "Try on a second PC, real two-player driving" },
-        { fr: "4 joueurs et plus", en: "4 players and more" },
-        { fr: "Les carrés sombres autour des véhicules", en: "The dark squares around vehicles" }
+        { fr: "Partie à quatre entre plusieurs PC", en: "Four-player game across several PCs" },
+        { fr: "Confirmer en course la correction des carrés sombres autour des véhicules", en: "Confirm in a race the fix for the dark squares around vehicles" },
+        { fr: "Reflets d'objectif du soleil plus forts que sur PS3", en: "Sun lens flares stronger than on PS3" },
+        { fr: "Latence manette → écran : la réduction à juger en jouant", en: "Pad-to-screen latency: the reduction to be judged by playing" }
       ],
       milestones: [
         { date: "2026-11-19", text: { fr: "59 670 fonctions PPU et 21 images SPU recompilées, premier démarrage", en: "59,670 PPU functions and 21 SPU images recompiled, first boot" } },
@@ -214,7 +222,9 @@ window.TRACKER = {
         { date: "2026-11-22", text: { fr: "Lumière corrigée, 17 → 24 images/s en roulant", en: "Lighting fixed, 17 → 24 frames a second while driving" } },
         { date: "2026-11-23", text: { fr: "Son réglé, scintillements corrigés, compilation guidée par profil", en: "Sound fixed, flicker fixed, profile-guided build" } },
         { date: "2026-11-24", text: { fr: "30 images/s tenues, vrai Full HD, lanceur ; mode LAN du jeu réveillé : course à deux puis à trois", en: "30 frames a second held, true Full HD, launcher; the game's LAN mode woken up: two-, then three-player race" } },
-        { date: "2026-11-25", text: { fr: "« Trouver une partie », courses d'affilée, progression en ligne sauvegardée", en: "\"Find a game\", back-to-back races, online progression saved" } }
+        { date: "2026-11-25", text: { fr: "« Trouver une partie », courses d'affilée, progression en ligne sauvegardée ; sources publiées, première proposition envoyée à ps3recomp", en: "\"Find a game\", back-to-back races, online progression saved; sources published, first proposal sent to ps3recomp" } },
+        { date: "2026-11-25", text: { fr: "Course à deux entre deux PC validée ; carrés sombres expliqués (une texture 3D lue en 2D) et corrigés", en: "Two-player race across two PCs confirmed; dark squares explained (a 3D texture read as 2D) and fixed" } },
+        { date: "2026-11-26", text: { fr: "Latence manette → écran réduite, lanceur à sections", en: "Pad-to-screen latency reduced, launcher with sections" } }
       ]
     },
 
@@ -288,22 +298,26 @@ window.TRACKER = {
         { label: { fr: "Courses solo, drag, poursuite", en: "Solo races, drag, pursuit" }, state: "done" },
         { label: { fr: "Boutique et garage", en: "Shop and garage" }, state: "partial" },
         { label: { fr: "Lobbies et courses multijoueur", en: "Multiplayer lobbies and races" }, state: "partial" },
+        { label: { fr: "Succès, powerups, amis, back-office", en: "Achievements, powerups, friends, back office" }, state: "partial" },
         { label: { fr: "Nouveautés (circulation partagée, police)", en: "New features (shared traffic, police)" }, state: "todo" }
       ],
       works: [
         { fr: "Connexion, création de profil, monde ouvert, chasse au trésor", en: "Login, profile creation, open world, treasure hunt" },
         { fr: "Courses solo, drag et poursuite validées en jeu, XP et passage de niveau", en: "Solo races, drag and pursuit checked in game, XP and level-ups" },
         { fr: "Achats : voitures, pièces, peintures, packs de cartes", en: "Shopping: cars, parts, paints, card packs" },
-        { fr: "Chat en jeu (serveur XMPP intégré), lobby et compte à rebours", en: "In-game chat (built-in XMPP server), lobby and countdown" }
+        { fr: "Chat en jeu (serveur XMPP intégré), lobby et compte à rebours", en: "In-game chat (built-in XMPP server), lobby and countdown" },
+        { fr: "Powerups consommés en course, progression des succès, classement envoyé après une course", en: "Powerups used up in races, achievement progress, leaderboard sent after a race" }
       ],
       next: [
-        { fr: "Lancer une course multijoueur à deux clients", en: "Start a multiplayer race with two clients" },
-        { fr: "Personnalisation des voitures au garage", en: "Car customisation in the garage" },
-        { fr: "Circulation partagée en course, police active en monde ouvert", en: "Shared traffic in races, active police in the open world" }
+        { fr: "Lancer une course multijoueur à deux clients (second PC ou machine virtuelle)", en: "Start a multiplayer race with two clients (second PC or virtual machine)" },
+        { fr: "Voir en jeu amis, signalements, commandes de chat et paliers de succès", en: "See friends, reports, chat commands and achievement tiers in game" },
+        { fr: "Options sociales (« apparaître hors ligne »), connexion par le launcher moderne", en: "Social settings (\"appear offline\"), login through the modern launcher" },
+        { fr: "Circulation partagée en course ; police en monde ouvert : demande de modifier le client, à décider", en: "Shared traffic in races; open-world police: needs a client change, to be decided" }
       ],
       milestones: [
         { date: "2026-10-20", text: { fr: "Premier essai avec le vrai client : connexion, courses solo, chat, XP, poursuite", en: "First try with the real client: login, solo races, chat, XP, pursuit" } },
-        { date: "2026-11-25", text: { fr: "Packs de cartes validés en jeu ; lobbies multijoueur, relais UDP de course et arbitrage portés", en: "Card packs checked in game; multiplayer lobbies, race UDP relay and arbitration ported" } }
+        { date: "2026-11-25", text: { fr: "Packs de cartes validés en jeu ; lobbies multijoueur, relais UDP de course et arbitrage portés", en: "Card packs checked in game; multiplayer lobbies, race UDP relay and arbitration ported" } },
+        { date: "2026-11-25", text: { fr: "Succès, classements et powerups (vus en jeu) ; back-office web, amis et blocage, signalements, commandes de chat", en: "Achievements, leaderboards and powerups (seen in game); web back office, friends and blocking, reports, chat commands" } }
       ]
     },
 
