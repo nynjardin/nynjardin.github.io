@@ -4,16 +4,16 @@ Liste de ce que le site affiche, sans avoir à l'ouvrir. Pour ajouter, retirer o
 projet, il suffit de le dire (« ajoute X », « enlève Y ») ; le contenu vit dans
 `data/projects.js`, cette liste est mise à jour en même temps.
 
-*Mise à jour : 2026-11-26 — 11 projets.*
+*Mise à jour : 2026-11-27 — 11 projets.*
 
 Étapes : ✅ faite · 🟡 en partie · ⬜ à faire.
 
 | # | Id | Projet | Plateforme | Type | Statut | Étapes | Dernière activité |
 |---|---|---|---|---|---|---|---|
-| 1 | `burnout3` | Burnout 3: Takedown — portage PC natif, édition LAN | PS2 → PC | portage | 📦 release | ✅✅✅✅✅🟡 | 2026-11-19 |
+| 1 | `burnout3` | Burnout 3: Takedown — portage PC natif, édition LAN | PS2 → PC | portage | 📦 release | ✅✅✅✅✅✅🟡 | 2026-11-27 |
 | 2 | `burnout-paradise` | Burnout Paradise — serveur LAN privé (The Ultimate Box) | PC | serveur | 🔧 actif | ✅✅✅🟡⬜⬜ | 2026-10-28 |
 | 3 | `evil-dead` | Evil Dead: The Game — kraken-emu, le backend émulé | PC | serveur | 🔧 actif | ✅✅✅🟡⬜⬜ | 2026-11-14 |
-| 4 | `motorstorm` | MotorStorm: Apocalypse — recompilation statique | PS3 → PC | portage | 🔧 actif | ✅✅✅✅✅⬜⬜ | 2026-11-26 |
+| 4 | `motorstorm` | MotorStorm: Apocalypse — recompilation statique | PS3 → PC | portage | 🔧 actif | ✅✅✅✅✅🟡⬜ | 2026-11-27 |
 | 5 | `nfs-hot-pursuit` | Need for Speed: Hot Pursuit (2010) — serveur Blaze local | PC | serveur | 🔧 actif | ✅✅✅🟡⬜⬜ | 2026-10-22 |
 | 6 | `nfs-world` | Need for Speed: World — SBRW Go, le serveur réécrit en Go | PC | serveur | 🔧 actif | ✅✅✅🟡🟡🟡⬜ | 2026-11-25 |
 | 7 | `star-trek-bridge-crew` | Star Trek: Bridge Crew — serveur de remplacement | PC (VR) | serveur | 🔧 actif | ✅✅✅✅⬜ | 2026-10-22 |

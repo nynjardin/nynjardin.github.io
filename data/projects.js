@@ -13,7 +13,7 @@
  */
 window.TRACKER = {
   owner: "nynjardin",
-  updated: "2026-11-26",
+  updated: "2026-11-27",
 
   projects: [
     // ------------------------------------------------------------------ Burnout 3
@@ -26,7 +26,7 @@ window.TRACKER = {
       kind: "port",
       status: "release",
       started: "2026-10-13",
-      lastActivity: "2026-11-19",
+      lastActivity: "2026-11-27",
       summary: {
         fr: "Le portage PC natif de Burnout 3 (recompilation du programme PS2 en C++) retrouve son mode en ligne, en réseau local : créer un salon, en rejoindre un, régler la course et la lancer, sans aucun serveur tiers. Le salon est servi par le jeu lui-même. S'y ajoute un lanceur portable.",
         en: "The native PC port of Burnout 3 (the PS2 program recompiled to C++) gets its online mode back, over a local network: create a lobby, join one, set up the race and start it, with no third-party server. The lobby is served by the game itself. A portable launcher comes with it."
@@ -51,17 +51,21 @@ window.TRACKER = {
         { label: { fr: "Salon servi par le jeu, découverte automatique", en: "Lobby served by the game, automatic discovery" }, state: "done" },
         { label: { fr: "Essai entre plusieurs PC", en: "Tried across several PCs" }, state: "done" },
         { label: { fr: "Release publique « LAN edition »", en: "Public \"LAN edition\" release" }, state: "done" },
-        { label: { fr: "Édition 0.9.0-lan.1 (amont 0.9.0 fusionné)", en: "0.9.0-lan.1 edition (upstream 0.9.0 merged)" }, state: "partial" }
+        { label: { fr: "Édition 0.9.0-lan.1 (amont 0.9.0 fusionné)", en: "0.9.0-lan.1 edition (upstream 0.9.0 merged)" }, state: "done" },
+        { label: { fr: "Mod MK ULTRA (tirs et cubes d'objets en course)", en: "MK ULTRA mod (shots and item boxes in races)" }, state: "partial" }
       ],
       works: [
         { fr: "MULTIPLAYER → LAN : créer, rejoindre, régler et lancer une course, résultats, revanche", en: "MULTIPLAYER → LAN: create, join, set up and start a race, results, rematch" },
         { fr: "Les réglages de l'hôte (trafic, CRASH BREAKER, miroir) appliqués à tous", en: "The host's settings (traffic, CRASH BREAKER, mirror) applied to everyone" },
         { fr: "Colonne PING dans la salle d'attente, liaisons retentées", en: "PING column in the waiting room, links retried" },
-        { fr: "60 images/s en course, rattrapage sur les PC plus lents", en: "60 frames a second in races, catch-up on slower PCs" }
+        { fr: "60 images/s en course, rattrapage sur les PC plus lents", en: "60 frames a second in races, catch-up on slower PCs" },
+        { fr: "Release 0.9.0-lan.1 publiée (amont 0.9.0 fusionné, liste des réseaux corrigée)", en: "0.9.0-lan.1 release published (upstream 0.9.0 merged, network list fixed)" },
+        { fr: "Mod expérimental MK ULTRA : tirs (vert, rouge, bleu) sur la route du jeu et cubes d'objets, vérifiés par parcours scriptés, solo et LAN à deux instances", en: "Experimental MK ULTRA mod: shots (green, red, blue) along the game's road and item boxes, checked by scripted runs, solo and two-instance LAN" }
       ],
       next: [
-        { fr: "Construire et publier la release 0.9.0-lan.1", en: "Build and publish the 0.9.0-lan.1 release" },
+        { fr: "Essai à quatre PC : classement en retard d'environ 0,5 s et voitures des autres parfois à 45° (mesure du trafic réseau prévue)", en: "Four-PC test findings: standings about 0.5 s late and other players' cars sometimes at 45° (network traffic measurement planned)" },
         { fr: "Vérifier à deux le retour au salon après une course", en: "Check the return to the lobby after a race with two players" },
+        { fr: "MK ULTRA : essai joué, puis le trafic (un civil touché explose et décolle)", en: "MK ULTRA: play-test, then traffic (a hit civilian car explodes and flies off)" },
         { fr: "ELIMINATOR en ligne (expérimental, encore désactivé)", en: "ELIMINATOR online (experimental, still disabled)" }
       ],
       milestones: [
@@ -74,7 +78,9 @@ window.TRACKER = {
         { date: "2026-11-13", type: "release", tag: "v0.8.0-lan.1", text: { fr: "Release « LAN edition » 0.8.0-lan.1", en: "\"LAN edition\" 0.8.0-lan.1 release" } },
         { date: "2026-11-13", type: "release", tag: "nynjardin/burnout3-launcher@v0.2.0", text: { fr: "Lanceur portable v0.2.0", en: "Portable launcher v0.2.0" } },
         { date: "2026-11-15", type: "upstream", text: { fr: "Deux contributions fusionnées dans le portage et le moteur amont", en: "Two contributions merged into the upstream port and engine" } },
-        { date: "2026-11-19", text: { fr: "Amont 0.9.0-alpha fusionné (rendu natif, MSAA) ; 0.9.0-lan.1 en préparation", en: "Upstream 0.9.0-alpha merged (native renderer, MSAA); 0.9.0-lan.1 in preparation" } }
+        { date: "2026-11-19", text: { fr: "Amont 0.9.0-alpha fusionné (rendu natif, MSAA) ; 0.9.0-lan.1 en préparation", en: "Upstream 0.9.0-alpha merged (native renderer, MSAA); 0.9.0-lan.1 in preparation" } },
+        { date: "2026-11-26", type: "release", tag: "v0.9.0-lan.1", text: { fr: "Release « LAN edition » 0.9.0-lan.1", en: "\"LAN edition\" 0.9.0-lan.1 release" } },
+        { date: "2026-11-27", text: { fr: "Mod MK ULTRA : tirs sur la route du jeu, rebonds, cubes d'objets", en: "MK ULTRA mod: shots along the game's road, bounces, item boxes" } }
       ]
     },
 
@@ -180,7 +186,7 @@ window.TRACKER = {
       kind: "port",
       status: "active",
       started: "2026-11-19",
-      lastActivity: "2026-11-26",
+      lastActivity: "2026-11-27",
       summary: {
         fr: "Un portage PC natif de MotorStorm: Apocalypse, par recompilation statique du code PowerPC et SPU de la PS3 en C++ (avec ps3recomp). Les courses tournent avec un rendu correct, et le mode LAN caché dans le jeu a été réveillé : on joue en réseau entre plusieurs PC, sans aucun serveur. Pacific Rift est aussi recompilé, sans portage pour l'instant.",
         en: "A native PC port of MotorStorm: Apocalypse, by static recompilation of the PS3's PowerPC and SPU code to C++ (with ps3recomp). Races run with correct rendering, and the LAN mode hidden in the game has been woken up: network play across several PCs, with no server at all. Pacific Rift is lifted too, with no port yet."
@@ -200,7 +206,7 @@ window.TRACKER = {
         { label: { fr: "30 images/s tenues, vrai Full HD", en: "30 frames a second held, true Full HD" }, state: "done" },
         { label: { fr: "LAN sans serveur, 2 et 3 joueurs sur un PC", en: "Serverless LAN, 2 and 3 players on one PC" }, state: "done" },
         { label: { fr: "LAN entre deux PC", en: "LAN across two PCs" }, state: "done" },
-        { label: { fr: "4 joueurs et plus", en: "4 players and more" }, state: "todo" },
+        { label: { fr: "4 joueurs et plus (validé à 4 sur un PC, reste à confirmer sur 4 PC)", en: "4 players and more (checked with 4 on one PC, still to confirm on 4 PCs)" }, state: "partial" },
         { label: { fr: "Release publique", en: "Public release" }, state: "todo" }
       ],
       works: [
@@ -208,10 +214,14 @@ window.TRACKER = {
         { fr: "Résolution libre (1080p, 1440p), lanceur en anglais et français, jeu autonome dans son dossier", en: "Free resolution (1080p, 1440p), launcher in English and French, game self-contained in its folder" },
         { fr: "Course à deux entre deux PC, parfaitement fluide", en: "Two-player race across two PCs, perfectly smooth" },
         { fr: "Salon, « Trouver une partie » (hôte, mode, joueurs et circuit de chaque partie), courses d'affilée", en: "Lobby, \"Find a game\" (host, mode, players and track of each game), back-to-back races" },
-        { fr: "Progression en ligne (jetons, rang) gardée en local", en: "Online progression (chips, rank) kept locally" }
+        { fr: "Progression en ligne (jetons, rang) gardée en local", en: "Online progression (chips, rank) kept locally" },
+        { fr: "Démarrage plus rapide : titre en 30 s au lieu de 48, chargement de course en 7 s au lieu de 18 ; START passe les écrans de démarrage", en: "Faster start: title in 30 s instead of 48, race load in 7 s instead of 18; START skips the boot screens" },
+        { fr: "Les vrais films du jeu lus (gel et son corrigés, 25 lectures sur 25 sans gel), recodés en H.264 pour un dossier de jeu plus léger", en: "The game's real movies play (stall and sound fixed, 25 playbacks out of 25 without a stall), re-encoded to H.264 for a lighter game folder" },
+        { fr: "Écran de chargement : l'image du jeu s'affiche au lieu du menu précédent", en: "Loading screen: the game's image shows instead of the previous menu" }
       ],
       next: [
-        { fr: "Partie à quatre entre plusieurs PC", en: "Four-player game across several PCs" },
+        { fr: "Partie à quatre entre plusieurs PC (validée à quatre sur un PC)", en: "Four-player game across several PCs (checked with four on one PC)" },
+        { fr: "Juger en jouant les films (image, son, synchro) et les nouveaux chargements", en: "Judge by playing the movies (picture, sound, sync) and the new load times" },
         { fr: "Confirmer en course la correction des carrés sombres autour des véhicules", en: "Confirm in a race the fix for the dark squares around vehicles" },
         { fr: "Reflets d'objectif du soleil plus forts que sur PS3", en: "Sun lens flares stronger than on PS3" },
         { fr: "Latence manette → écran : la réduction à juger en jouant", en: "Pad-to-screen latency: the reduction to be judged by playing" }
@@ -224,7 +234,8 @@ window.TRACKER = {
         { date: "2026-11-24", text: { fr: "30 images/s tenues, vrai Full HD, lanceur ; mode LAN du jeu réveillé : course à deux puis à trois", en: "30 frames a second held, true Full HD, launcher; the game's LAN mode woken up: two-, then three-player race" } },
         { date: "2026-11-25", text: { fr: "« Trouver une partie », courses d'affilée, progression en ligne sauvegardée ; sources publiées, première proposition envoyée à ps3recomp", en: "\"Find a game\", back-to-back races, online progression saved; sources published, first proposal sent to ps3recomp" } },
         { date: "2026-11-25", text: { fr: "Course à deux entre deux PC validée ; carrés sombres expliqués (une texture 3D lue en 2D) et corrigés", en: "Two-player race across two PCs confirmed; dark squares explained (a 3D texture read as 2D) and fixed" } },
-        { date: "2026-11-26", text: { fr: "Latence manette → écran réduite, lanceur à sections", en: "Pad-to-screen latency reduced, launcher with sections" } }
+        { date: "2026-11-26", text: { fr: "Latence manette → écran réduite, lanceur à sections", en: "Pad-to-screen latency reduced, launcher with sections" } },
+        { date: "2026-11-27", text: { fr: "Vrais films du jeu lus, démarrage 48 → 30 s et chargement de course 18 → 7 s, écran de chargement corrigé, partie à quatre validée sur un PC", en: "The game's real movies play, boot 48 → 30 s and race load 18 → 7 s, loading screen fixed, four-player game checked on one PC" } }
       ]
     },
 
